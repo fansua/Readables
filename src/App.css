@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.App {
+    text-align: left;
+
+}
+
+.App-header {
+  background-color: #ffd;
+
+}
+.App-header nav {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.AppHome-header  {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+
+}
+.AppHome-Addpost  {
+  text-align: right;
+  text-decoration: none;
+  color: #56b9d0;
+  width: 100%;
+  display: inline-block;
+
+}
+.AppHome-Category {
+  text-align: center;
+  width: 100px;
+  text-decoration: none;
+  color: #56b9d0;
+  width: 100%;
+}
+.AppHome-Category h5{
+  border-bottom: 1px solid #56b9d0;
+  padding: 15px 8px 4px 0;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+  color: #ca0035;
+}
+
+.AppHome-CategoryList {
+  text-align: center;
+  text-decoration: none;
+  color: #56b9d0;
+  width: 100%;
+  list-style-type: none;
+}
+
+
+.ListPosts-Section{
+padding-bottom: 2em;
+}
+.ListPosts-Link{
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+  color: #fff;
+  background: #999;
+  font-size: 80%;
+  background: #5aba59;
+}
+.ListPosts-Info{
+  color: #999;
+  font-size: 90%;
+  margin: 0;
+}
+
+.ListPosts-Body {
+  font-family: Georgia, "Cambria", serif;
+  color: #444;
+  line-height: 1.8em;
+  font-size: 20px;
+}
+.ListPosts-Title {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.2em;
+}
+
+.PostDetails-close {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url('./images/arrow-back.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  font-size: 0;
+}
+.PostDetails-Container {
+    text-align: center;
+
+}
+.PostDetails-Section{
+padding-bottom: 2em;
+}
+.PostDetails-Link{
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+  color: #fff;
+  background: #999;
+  font-size: 80%;
+  background: #5aba59;
+}
+.PostDetails-Info{
+  color: #999;
+  font-size: 90%;
+  margin: 0;
+}
+
+.PostDetails-Body {
+  font-family: Georgia, "Cambria", serif;
+  color: #444;
+  line-height: 1.8em;
+  font-size: 20px;
+}
+.PostDetails-Title {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.2em;
+}
+.icon-container {
+  display: inline-block;
+  margin: 0 5px;
+  text-align: center;
+  cursor: pointer;
+  color: #666;
+  text-decoration: none;
+  font-size: 60%
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin: 0 5px;
+  font-size: 0;
+  cursor:pointer;
+}
+
+
+.Thumbs-Up {
+  background-image: url('./images/Thumbs-Up.png')
+}
+
+.Thumbs-Down {
+  background-image: url('./images/Thumbs-Down.png')
+}
+.Delete-Post {
+  background-image: url('./images/Delete-Post.png')
+}
+.Edit-Post {
+  background-image: url('./images/Edit-Post.png')
+}
+
+.Comment-Count {
+  background-image: url('./images/Comment-Count.png');
+
+}
+
+.ListPosts-Read-More {
+  background-image: url('./images/read-more.png');
+
+  width: 80px;
+  height: 80px;
+
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+.post-modal-icon {
+  background: none;
+  font-size: 18px;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.post-modal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-modal-container {
+  margin: 0 auto;
+  max-width: 1070px;
+  padding: 20px;
+  min-width: 1070px;
+}
+
+.overlay {
+  position: center;
+  top: 300px;
+  left: 0px;
+  right: 4000px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.modal {
+  position: absolute;
+  top: 40px;
+  left: 200px;
+  right: 200px;
+  bottom: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,.24), 0 3px 12px 0 rgba(0,0,0,.12);
+  min-width: 500px;
+}
+
+.PostForm {
+  text-align: center;
+  font-family: Georgia, "Cambria", serif;
+  color: #444;
+  line-height: 1.8em;
+  font-size: 20px;
+}
+
+.CommentsForm {
+  text-align: center;
+  font-family: Georgia, "Cambria", serif;
+  color: #444;
+  line-height: 1.8em;
+  font-size: 20px;
+}
+
+.comments-container {
+  text-align: center;
+  font-family: Georgia, "Cambria", serif;
+  color: #444;
+  line-height: 1.3em;
+  font-size: 14px;
+}
