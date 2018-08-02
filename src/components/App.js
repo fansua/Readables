@@ -32,6 +32,10 @@ class App extends Component {
     }
   render() {
 
+     if(this.props.match.isExact === false && this.props.location.key === undefined)
+     {
+       return <NotFound />
+     }
     return (
       <div className="App">
         <header className="App-header">
@@ -45,8 +49,8 @@ class App extends Component {
            <Route exact path='/create' component={PostForm}  />
            <Route exact path='/:category' component={AppHome} />
            <Route exact path='/:category/:post_id' component={PostDetails} />
-           <Route   path='/:category/:post_id/comment' component={CommentForm} />
-           <Route    component={NotFound} />
+           <Route exact path='/:category/:post_id/comment' component={CommentForm} />
+           <Route  component={NotFound} />
           </Switch>
       </div>
     );
