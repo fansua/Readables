@@ -7,6 +7,7 @@ import {updatePostVote,deletePost,editPost } from '../actions'
 import Modal from 'react-modal'
 import * as utils from '../utils/helpers'
 import EditPostModal from './EditPostModal'
+import NotFound from './NotFound'
 
 Modal.setAppElement('#root')
 
@@ -68,7 +69,10 @@ class PostDetails extends Component{
     const filteredPosts = (post.length >0 && match.params.post_id !==null ) ? post.filter(p => p.id === match.params.post_id) :""
     const postId = match.params.post_id
 
-
+    if(filteredPosts.length === 0){
+      return <NotFound />
+    }
+  
     return(
       <div>
         <Link className='PostDetails-close' to='/'>Previous</Link><br />
@@ -77,11 +81,11 @@ class PostDetails extends Component{
             <section className="PostDetails-Section" key={post.id}>
               <header className="PostDetails-Header">
                   <h2 className="PostDetails-Title">{post.title}</h2>
-                  <p className="PostDetails-Info">
-                    Posted By <span className="PostDetails-Author">{post.author}</span>
+                  <h6 className="PostDetails-Info">
+                    Posted By: <span className="PostDetails-Author">{post.author}</span>
                      <p to={`${post.category}`} className="post-e-category">{utils.capitalize(post.category)}</p>
                     on {utils.formatDate(post.timestamp)}
-                    </p>
+                    </h6><br />
               </header>
               <div className="post-body">
                 <p>{post.body}</p>

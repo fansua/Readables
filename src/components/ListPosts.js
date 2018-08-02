@@ -91,7 +91,7 @@ updateEdittedPost = (id,editDetails) => {
                 <h2 className="ListPosts-Title">{p.title}</h2>
                 <p className="ListPosts-Info">
                   Posted By <span className="ListPosts-author">{p.author}</span>
-                    <p className="ListPosts-Link">{utils.capitalize(p.category)}</p>
+                    <i className="ListPosts-Link">{utils.capitalize(p.category)}</i>
                   on {utils.formatDate(p.timestamp)}
                   </p>
             </header><br />

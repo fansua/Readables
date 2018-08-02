@@ -9,6 +9,7 @@ import AppHome from './AppHome'
 import PostForm from './PostForm'
 import CommentForm from './CommentForm'
 import PostDetails from './PostDetails'
+import NotFound from './NotFound'
 
 class App extends Component {
 
@@ -45,6 +46,7 @@ class App extends Component {
            <Route exact path='/:category' component={AppHome} />
            <Route exact path='/:category/:post_id' component={PostDetails} />
            <Route   path='/:category/:post_id/comment' component={CommentForm} />
+           <Route    component={NotFound} />
           </Switch>
       </div>
     );
