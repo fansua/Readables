@@ -6,6 +6,7 @@ import {updatePostVote,deletePost, editPost} from '../actions'
 import {Link} from 'react-router-dom'
 import EditPostModal from './EditPostModal'
 import Modal from 'react-modal'
+import NotFound from './NotFound'
 
 Modal.setAppElement('#root')
 
@@ -69,6 +70,11 @@ updateEdittedPost = (id,editDetails) => {
     const { post, listCategory,sortBy } = this.props
     const filteredPosts = (post.length >0 && listCategory !==null && listCategory !== "all") ? post.filter(p =>
       p.category === listCategory && p.deleted === false) : post.filter(p => p.deleted ===false )
+
+      if(filteredPosts.length === 0){
+        return <NotFound />
+      }
+      
   if(filteredPosts.length >=2){
      filteredPosts.sort((a,b) =>{
           switch(sortBy){

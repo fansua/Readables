@@ -32,10 +32,6 @@ class App extends Component {
     }
   render() {
 
-     if(this.props.match.isExact === false && this.props.location.key === undefined)
-     {
-       return <NotFound />
-     }
     return (
       <div className="App">
         <header className="App-header">
